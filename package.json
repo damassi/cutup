@@ -1,0 +1,24 @@
+{
+  "name": "cutup",
+  "version": "0.1.0",
+  "description": "Cutup generator",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js -f",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/damassi/cutup.git"
+  },
+  "author": "Christopher Pappas",
+  "license": "mit",
+  "bugs": {
+    "url": "https://github.com/damassi/cutup/issues"
+  },
+  "homepage": "https://github.com/damassi/cutup",
+  "dependencies": {
+    "lodash.shuffle": "^3.1.0",
+    "yargs": "^3.19.0"
+  }
+}

@@ -1,0 +1,71 @@
+Joe Hildebrand: When we're doing security work here, we often hear push back on having default secure kinds of modes because of things like corporate networks where the corporation owns the network, they own the computer and so, they feel like they are justifying doing data loss preventions sorts of things. Those kinds of requirements act as a ratchet down on the security of the kinds of things that we can build.
+
+I'm wondering if you thought at all about ways that we can do requirements analysis that would help us set the ratchet in the other direction?
+
+Edward Snowden: So, one of the biggest things here and I think this is really the central thing, is it comes back again, who does the internet belong to, who does it serve, who's the IETF's ultimate customer? And the corporations – they have significant influence, vendors have significant influence inaudible.
+
+They're not the enemy. They serve, they make vital contributions, but we need to be careful about granting an outside influence particularly when they have alternate means, other mechanisms of achieving their goals.
+
+When you think about things like DLP, Data Loss Prevention, and whatnot on the network and the relationship of that to things like security based protocols, you have to go "all right, well, the benefit that the vendors, that the corporate customers, that the enterprise gains in convenience from having a less secure protocol is being paid for at a cost that's a threat to safety to users around the world. Which one of these needs to be weighed heavily?"
+
+And I think it's not too much an ask to recognise that the user at scale, the internet as a body, has a greater interest in security than the enterprise has in convenience because the user cannot necessarily mitigate their circumstances. They lack in resources. They lack in capability. They lack in technological sophistication to protect themselves.
+
+However, the enterprise has root on all of their endpoints. If they want to implement any kind of DLP solution, they can do so. They can run their own homegrown system. They can implement a commercial system. They can put out their own certificate authority. They can do whatever they want because they have root on all the systems.
+
+It’s just like when you’re thinking about the NSA. They've got the Tailored Access Operations office. These are the hackers; these guys will go and get root on the boxes that we say "I wanna know what that guy is doing. Get rid of it".
+
+And whether they’re now an export it, whether they e-mail and exploit, or, they inject something to network traffic stream or whatever, they get root. And then no matter what kind of personal security products that person is using, what kind of encryption they’re using, it doesn't help them because the NSA is now their systems administrator.
+
+The enterprise is their own system administrator. They can handle this through alternative mechanisms that don't have the same costs for the global inaudible.
+
+Joe Hildebrand: I think that’s a useful construction. Thank you.
+
+Mark Nottingham: So we’ve been going for about half an hour. I know you might be time constrained or –
+
+Edward Snowden: Well, let’s extend a little bit longer; about ten more minutes, if that’s okay with you.
+
+Mark Nottingham: That’s just fine.
+
+Bitcoin
+
+0:29:35
+
+???: What scared me most about the documentary and some of the comments were making sense even right now is not the data and we can encrypt that, but the metadata and the correlation. So the fact that our point of view now is going to get you in real, real trouble.
+
+laughter
+
+Edward Snowden: Probably. I just moved a couple of steps up on the list after this discussion.
+
+???: Exactly. So question for you is the first example you gave was credit card being so dangerous. What do you think about things like – I mean you talk about – you can anonymise the end point, but then I'm talking to you, and then how do I know I'm talking to you and how do we have a meaningful conversation without the NSA knowing who's talking to whom, but the big thing might be for money.
+
+So what about Bitcoin or things like Bitcoin that says at least the market transactions get anonymized when...
+
+Edward Snowden: So, the Bitcoin thing is – I mean this is – nobody really likes to talk about Bitcoin anymore. There are informed concepts there. Obviously, Bitcoin by itself is flawed. The protocol has a lot of weaknesses and transaction sides and a lot of weaknesses that structurally make it vulnerable to people who are trying to own 50 percent of the network and so on and so forth.
+
+But when we think about the basic principles behind it, there are some very interesting things that particularly when we start to combine them with that idea like before of tokenization, of concepts like proof of work.
+
+Are there other means through which people can basically pay for access other than direct transfers of currency that originated with an association to their true name?
+
+The other ones are inaudible mixed in networks, for example, where we have multiple steps just like Tor where they got these mixed inaudible in the Bitcoin universe where they tumble the transactions of the Bitcoins that go in it to pay for your purchase aren't the same Bitcoins that go out.
+
+But focusing too much on Bitcoin, I think, is a mistake. The real solution is again, how do we get to a point where you don't have to have a direct link between your identity all of the time? You have personas. You have tokens that authenticate each person and when you want to be able to interact with people as your persona in your true name, you can do so. When you want to be able to switch to a persona - a common persona, an anonymous persona, a shared persona, you can do that. When you want to move to pseudonymous persona, you can do that.
+
+A lot of these are difficult problems particularly when we talk about the metadata context, the signalling context. And there are actually some really bad proposals, I think, and this is in no offense to anybody who works on these particular problem spaces, but again, it gets back to the middlebox space.
+
+We've got proposals like SPUD, for example, where they wanna make UDP a new channel for leaking metadata about the user's intention. They want to be able to –
+
+applause
+
+I get the feeling that there are a lot of people in the audience who are concerned about middleboxes. I didn't know...
+
+laughter.
+
+All right. So the idea here is we can all understand the incentives of these vendors. They want to be able to provide mechanisms for tiered pricing. They want to be able to provide prioritised service or increased rates. They want to be able to say, “Whatever, we'll kick you down a tier and we'll charge you less,” and these things are great, but again, those are their incentives, right? Those are not the internet's problem sets. Those are the vendors' problem sets.
+
+And when we think about things like they talk about – all right – well, we want to be able to innovate in protocol space, so good - so does everybody, right? This isn't a thing where the vendor is against the IETF or the vendor's against the technical community, academic community, whatever.
+
+We're all partners here, but we need to think about where the actual problems of this ossification originated from in the protocol space and it's actually not from the IETF. It's from internet access providers. It's from network service providers. It's from Level Three, Hurricane Electric. People in the middle, people running middleboxes, setting their firewall settings to a point where basically there's no space for innovation because they don't – "oh, well, we don’t recognise it. It must be malicious". They don't update it. They don't basically tend to the garden that we're all collaborating on and so, the question comes, how do we try new mechanisms? How do we create new incentives for everybody to work together here?
+
+And I think the first is to recognise that when it comes to the global security problems we have with internet communications today, we have to recognise that the new proposals being put forward, we have to go, “Does this create more problems than it solves?"
+
+And if it's creating more metadata that’s associated with user preference, they can be intercepted, they can be manipulated, they can be interjected as a stream, this is in general a very bad thing. We need to be able to reduce the amount of metadata that's linked on a part of a user's communications invisible to them, not increasing.
